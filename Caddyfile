@@ -1,0 +1,7 @@
+:80 {
+    # 静态文件根目录，你打包输出是 dist
+    root * /app/dist
+    file_server
+    # SPA路由兜底，解决刷新404、MIME类型报错
+    try_files {path} {path}/ /index.html
+}
