@@ -40,13 +40,10 @@ const submitResume = async (e) => {
 
   try {
 
-    const response = await fetch(
-      'http://localhost:3000/api/resume',
-      {
-        method: 'POST',
-        body: formData
-      }
-    )
+    const response = await fetch('https://quman-websitc-production.up.railway.app/api/resume', {
+  method: 'POST',
+  body: formData
+})
 
     if (!response.ok) {
       throw new Error('服务器错误')
